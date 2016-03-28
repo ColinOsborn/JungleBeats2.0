@@ -7,3 +7,7 @@ class Node
     @node = node
   end
 end
+
+# In this case, node instance
+# variable refers to linked
+ # or next node
