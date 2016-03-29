@@ -8,7 +8,3 @@ class Node
     @next_node = nil
   end
 end
-
-
-# In this case, node instance
-# variable refers to linked or next node

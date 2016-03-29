@@ -21,7 +21,7 @@ class Linkedlist
   end
 
   def prepend(value)
-    @head
+
   end
 
 end
