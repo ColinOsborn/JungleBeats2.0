@@ -1,15 +1,14 @@
 require 'pry'
 class Node
   attr_accessor :value,
-                :next
+                :next_node
 
   def initialize(value)
     @value = value
-    @next = nil
+    @next_node = nil
   end
 end
 
 
 # In this case, node instance
-# variable refers to linked
- # or next node
+# variable refers to linked or next node

@@ -17,6 +17,6 @@ class NodeTest < Minitest::Test
 
   def test_linked_up
     node = Node.new("dee")
-    assert_equal nil, node.next
+    assert_equal nil, node.node
   end
 end
