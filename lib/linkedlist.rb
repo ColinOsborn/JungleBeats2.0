@@ -25,6 +25,8 @@ class Linkedlist
   end
 
   def count
+    counter = 0
+    current_node
 
   end
 
