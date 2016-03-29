@@ -16,8 +16,42 @@ class LinkedlistTest < Minitest::Test
     assert_equal "plop", node.value
   end
 
-  def test_append_another_node_to_create_head
-    n = append("dee")
-    assert_equal nil, n.append
+  def test_can_create_a_new_node_w_value_of_nil
+    node = Node.new(nil)
+    assert_equal nil, node.value
+  end
+
+  def test_the_head_can_be_a_nil_value
+    list = Linkedlist.new(nil)
+    assert_equal nil, list.head.value
+  end
+
+  def test_we_can_find_tail
+    list = Linkedlist.new("dee")
+    assert_equal "dee", list.tail.value
+  end
+
+  def test_we_can_append
+    list = Linkedlist.new('poop')
+    assert_equal 'poop', list.tail.value
+    assert_equal nil, list.tail.next_node
+
+    list.append('rad')
+    assert_equal 'rad', list.tail.value
+    assert_equal nil, list.tail.next_node
+  end
+
+  def test_we_can_append_multiple_nodes_onto_the_list
+    list = Linkedlist.new(nil)
+    assert_equal nil, list.tail.value
+    assert_equal nil, list.tail.next_node
+
+    list.append('rad')
+    assert_equal "rad", list.tail.value
+    assert_equal nil, list.tail.next_node
+
+    list.append('poop')
+    assert_equal 'poop', list.tail.value
+    assert_equal nil, list.tail.next_node
   end
 end

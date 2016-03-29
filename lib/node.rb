@@ -1,11 +1,11 @@
 require 'pry'
 class Node
   attr_accessor :value,
-                :node
+                :next_node
 
   def initialize(value)
     @value = value
-    @node = nil
+    @next_node = nil
   end
 end
 
