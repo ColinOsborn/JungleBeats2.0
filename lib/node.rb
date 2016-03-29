@@ -1,12 +1,14 @@
+require 'pry'
 class Node
   attr_accessor :value,
-                :node
+                :next
 
-  def initialize(value, node)
+  def initialize(value)
     @value = value
-    @node = node
+    @next = nil
   end
 end
+
 
 # In this case, node instance
 # variable refers to linked
