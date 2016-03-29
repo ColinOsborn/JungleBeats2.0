@@ -67,4 +67,11 @@ class LinkedlistTest < Minitest::Test
 
     assert_equal 3, list.count
   end
+
+  def test_can_put_my_nodes_to_a_string
+    list = Linkedlist.new("doop")
+    assert_equal "doop", list.tail.value
+
+    assert_equal "doop", list.to_string
+  end
 end

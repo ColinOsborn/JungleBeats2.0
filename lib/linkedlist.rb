@@ -30,4 +30,13 @@ class Linkedlist
     counter
   end
 
+  def to_string
+    node_list = []
+    current_node = @head
+      while current_node.next_node
+      node_list << @head.value
+      current_node = @head.next_node
+    end
+  end
+
 end
