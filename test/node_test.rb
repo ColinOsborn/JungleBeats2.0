@@ -2,7 +2,8 @@ gem "minitest", '~> 5.2'
 require 'minitest/autorun'
 require 'minitest/pride'
 require 'pry'
-require_relative "node"
+require_relative "../lib/linkedlist"
+require_relative "../lib/node"
 
 class NodeTest < Minitest::Test
 
@@ -17,6 +18,6 @@ class NodeTest < Minitest::Test
 
   def test_linked_up
     node = Node.new("dee")
-    assert_equal nil, node.node
+    assert_equal nil, node.next_node
   end
 end
