@@ -24,7 +24,8 @@ class Linkedlist
 
   end
 
+  def count
+
+  end
+
 end
-#tail method
-#append method
-# coun
