@@ -54,4 +54,17 @@ class LinkedlistTest < Minitest::Test
     assert_equal 'poop', list.tail.value
     assert_equal nil, list.tail.next_node
   end
+
+  def test_counter_can_count_my_nodes
+    list = Linkedlist.new(nil)
+    assert_equal nil, list.tail.value
+
+    list.append('rad')
+    assert_equal 'rad', list.tail.value
+
+    list.append('poop')
+    assert_equal 'poop', list.tail.value
+
+    assert_equal 3, list.count
+  end
 end

@@ -20,14 +20,14 @@ class Linkedlist
     tail.next_node = new_node
   end
 
-  def prepend(value)
-
-  end
-
   def count
-    counter = 0
-    current_node
-
+    current_node = @head
+    counter = 1
+      while current_node.next_node
+        counter += 1
+        current_node = current_node.next_node
+      end
+    counter
   end
 
 end
