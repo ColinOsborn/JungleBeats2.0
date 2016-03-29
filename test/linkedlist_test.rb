@@ -70,8 +70,36 @@ class LinkedlistTest < Minitest::Test
 
   def test_can_put_my_nodes_to_a_string
     list = Linkedlist.new("doop")
-    assert_equal "doop", list.tail.value
+    assert_equal "doop", list.head.value
 
-    assert_equal "doop", list.to_string
+    list.append("deep")
+    list.append("poop")
+    assert_equal "poop", list.tail.value
+    assert_equal "doop deep poop", list.to_string
+  end
+
+  def test_we_can_prepend_a_node
+    list = Linkedlist.new("plop")
+    assert_equal "plop", list.head.value
+
+    list.append("poop")
+    list.append("dee")
+
+    list.prepend("deep")
+    assert_equal "deep", list.head.value
+    assert_equal "deep plop poop dee", list.to_string
+  end
+
+  def test_we_can_insert_a_node
+    list = Linkedlist.new("dop")
+    assert_equal "dop", list.head.value
+
+    list.append("plop")
+    list.append("suu")
+    assert_equal "dop plop suu", list.to_string
+    assert_equal 3, list.count
+
+    list.insert(1, "woo")
+    assert_equal "dop plop woo suu", list.to_string
   end
 end

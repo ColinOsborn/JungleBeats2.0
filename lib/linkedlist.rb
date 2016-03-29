@@ -31,12 +31,33 @@ class Linkedlist
   end
 
   def to_string
-    node_list = []
+    node_list = "#{@head.value} "
     current_node = @head
-      while current_node.next_node
-      node_list << @head.value
-      current_node = @head.next_node
+    while current_node.next_node
+      node_list += "#{current_node.next_node.value} "
+      current_node = current_node.next_node
     end
+    node_list.chop
+  end
+
+  def prepend(value)
+    new_node = Node.new(value)
+    new_node.next_node = @head
+    @head = new_node
+  end
+
+  def insert(after_index, value)
+    # when the after_index is equal to me counter, insert here
+    current_node = @head
+    counter = 0
+    while counter != after_index
+      current_node = current_node.next_node
+      counter += 1
+    end
+     new_node = Node.new(value)
+     rest_of_list = current_node.next_node
+     current_node.next_node = new_node
+     new_node.next_node = rest_of_list
   end
 
 end
