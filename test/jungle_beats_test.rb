@@ -9,7 +9,8 @@ require_relative "../lib/node"
 class JungleBeatsTest < Minitest::Test
 
   def test_setup
-    assert_equal "Deep",
+    jb = JungleBeat.new("Deep")
+    assert_equal "Deep", jb.list.tail.value
   end
 
 end

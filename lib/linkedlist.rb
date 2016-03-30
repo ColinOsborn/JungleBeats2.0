@@ -3,8 +3,8 @@ require "pry"
 class Linkedlist
   attr_reader :head
 
-  def initialize(value)
-    @head = Node.new(value)
+  def initialize
+    @head = nil
   end
 
   def tail
@@ -16,8 +16,12 @@ class Linkedlist
   end
 
   def append(value)
+    if @head.nil?
+      @head = Node.new(value)
+    else
     new_node = Node.new(value)
     tail.next_node = new_node
+    end
   end
 
   def count
@@ -41,13 +45,19 @@ class Linkedlist
   end
 
   def prepend(value)
+    if @head.nil?
+      @head = Node.new(value)
+    else
     new_node = Node.new(value)
     new_node.next_node = @head
     @head = new_node
+    end
   end
 
   def insert(after_index, value)
-    # when the after_index is equal to the counter, insert here
+    if @head.nil?
+      @head = Node.new(value)
+    else
     current_node = @head
     counter = 0
     while counter != after_index
@@ -59,6 +69,7 @@ class Linkedlist
      current_node.next_node = new_node
      new_node.next_node = rest_of_list
   end
+end
 
   def find(position, elements)
     current_node = @head

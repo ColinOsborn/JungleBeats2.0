@@ -7,10 +7,8 @@ require_relative "../lib/node"
 
 class LinkedlistTest < Minitest::Test
 
-  # TODO: test for some edge cases
-
   def test_setup
-    assert_equal Linkedlist, Linkedlist.new("test").class
+    assert Linkedlist, Linkedlist.new
   end
 
   def test_can_create_a_new_node
@@ -23,18 +21,20 @@ class LinkedlistTest < Minitest::Test
     assert_equal nil, node.value
   end
 
-  def test_the_head_can_be_a_nil_value
-    list = Linkedlist.new(nil)
-    assert_equal nil, list.head.value
+  def test_the_head_will_be_nil_value
+    list = Linkedlist.new
+    assert_equal nil, list.head
   end
 
   def test_we_can_find_tail
-    list = Linkedlist.new("dee")
+    list = Linkedlist.new
+    list.append('dee')
     assert_equal "dee", list.tail.value
   end
 
   def test_we_can_append_one_node_into_the_list
-    list = Linkedlist.new('poop')
+    list = Linkedlist.new
+    list.append("poop")
     assert_equal 'poop', list.tail.value
     assert_equal nil, list.tail.next_node
 
@@ -44,7 +44,8 @@ class LinkedlistTest < Minitest::Test
   end
 
   def test_we_can_append_multiple_nodes_onto_the_list
-    list = Linkedlist.new(nil)
+    list = Linkedlist.new
+    list.append(nil)
     assert_equal nil, list.tail.value
     assert_equal nil, list.tail.next_node
 
@@ -58,9 +59,9 @@ class LinkedlistTest < Minitest::Test
   end
 
   def test_counter_can_count_my_nodes
-    list = Linkedlist.new(nil)
+    list = Linkedlist.new
+    list.append(nil)
     assert_equal nil, list.tail.value
-
     list.append('rad')
     assert_equal 'rad', list.tail.value
 
@@ -71,7 +72,8 @@ class LinkedlistTest < Minitest::Test
   end
 
   def test_can_put_my_nodes_to_a_string
-    list = Linkedlist.new("doop")
+    list = Linkedlist.new
+    list.append "doop"
     assert_equal "doop", list.head.value
 
     list.append("deep")
@@ -81,7 +83,8 @@ class LinkedlistTest < Minitest::Test
   end
 
   def test_we_can_prepend_a_node
-    list = Linkedlist.new("plop")
+    list = Linkedlist.new
+    list.append("plop")
     assert_equal "plop", list.head.value
 
     list.append("poop")
@@ -93,7 +96,8 @@ class LinkedlistTest < Minitest::Test
   end
 
   def test_we_can_insert_a_node
-    list = Linkedlist.new("dop")
+    list = Linkedlist.new
+    list.append("dop")
     assert_equal "dop", list.head.value
 
     list.append("plop")
@@ -106,7 +110,8 @@ class LinkedlistTest < Minitest::Test
   end
 
   def test_we_can_find_nodes_by_position_and_also_how_many_to_return
-    list = Linkedlist.new("ding")
+    list = Linkedlist.new
+    list.append("ding")
     assert_equal "ding", list.head.value
 
     list.append("plop")
@@ -119,7 +124,8 @@ class LinkedlistTest < Minitest::Test
     end
 
     def test_we_can_pop_off_node
-      list = Linkedlist.new("dah")
+      list = Linkedlist.new
+      list.append "dah"
       assert_equal "dah", list.head.value
 
       list.append("deep")
@@ -131,7 +137,8 @@ class LinkedlistTest < Minitest::Test
     end
 
     def test_include_in_my_nodes
-      list = Linkedlist.new("dop")
+      list = Linkedlist.new
+      list.append "dop"
       assert_equal "dop", list.head.value
 
       list.append("plop")
