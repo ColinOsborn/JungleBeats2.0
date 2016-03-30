@@ -8,4 +8,8 @@ require_relative "../lib/node"
 
 class JungleBeatsTest < Minitest::Test
 
+  def
+
+  end
+
 end
