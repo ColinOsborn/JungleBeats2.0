@@ -75,4 +75,9 @@ class Linkedlist
       string.strip
   end
 
+  def include(beat)
+    current_node = @head
+    while 
+  end
+
 end
