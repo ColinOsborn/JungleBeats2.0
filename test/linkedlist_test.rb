@@ -7,6 +7,8 @@ require_relative "../lib/node"
 
 class LinkedlistTest < Minitest::Test
 
+  # TODO: test for some edge cases
+
   def test_setup
     assert_equal Linkedlist, Linkedlist.new("test").class
   end

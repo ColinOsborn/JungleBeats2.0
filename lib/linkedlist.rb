@@ -47,7 +47,7 @@ class Linkedlist
   end
 
   def insert(after_index, value)
-    # when the after_index is equal to me counter, insert here
+    # when the after_index is equal to the counter, insert here
     current_node = @head
     counter = 0
     while counter != after_index
@@ -83,6 +83,7 @@ class Linkedlist
       beat
   end
 
+
   def pop
     saved = tail.value
     current = @head
@@ -90,7 +91,7 @@ class Linkedlist
       current = current.next_node
     end
     current.next_node = nil
-    saved 
+    saved
   end
 
 end

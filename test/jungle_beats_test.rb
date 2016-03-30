@@ -8,8 +8,8 @@ require_relative "../lib/node"
 
 class JungleBeatsTest < Minitest::Test
 
-  def
-
+  def test_setup
+    assert_equal "Deep",
   end
 
 end

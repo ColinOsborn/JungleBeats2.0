@@ -4,8 +4,8 @@ require "pry"
 
 class JungleBeat
 
-  def initialize
-    @list = Linkedlist.new
+  def initialize(beats)
+    @list = Linkedlist.new(beats).head
   end
 
 end
