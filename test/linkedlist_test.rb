@@ -31,7 +31,7 @@ class LinkedlistTest < Minitest::Test
     assert_equal "dee", list.tail.value
   end
 
-  def test_we_can_append
+  def test_we_can_append_one_node_into_the_list
     list = Linkedlist.new('poop')
     assert_equal 'poop', list.tail.value
     assert_equal nil, list.tail.next_node
@@ -102,4 +102,19 @@ class LinkedlistTest < Minitest::Test
     list.insert(1, "woo")
     assert_equal "dop plop woo suu", list.to_string
   end
+
+  def test_we_can_find_nodes_by_position_and_also_how_many_to_return
+    skip
+    list = Linkedlist.new("ding")
+    assert_equal "ding", list.head.value
+
+    list.append("plop")
+    assert_equal "ding plop", list.to_string
+    list.append("dee")
+    list.append("blop")
+    assert_equal "ding plop dee blop", list.to_string
+
+    list.find(2,1)
+    assert_equal "dee", list.find
+    end
 end
