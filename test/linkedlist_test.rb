@@ -104,7 +104,6 @@ class LinkedlistTest < Minitest::Test
   end
 
   def test_we_can_find_nodes_by_position_and_also_how_many_to_return
-    skip
     list = Linkedlist.new("ding")
     assert_equal "ding", list.head.value
 
@@ -114,7 +113,6 @@ class LinkedlistTest < Minitest::Test
     list.append("blop")
     assert_equal "ding plop dee blop", list.to_string
 
-    list.find(2,1)
-    assert_equal "dee", list.find
+    assert_equal "dee", list.find(2, 1)
     end
 end

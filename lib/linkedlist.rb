@@ -60,10 +60,19 @@ class Linkedlist
      new_node.next_node = rest_of_list
   end
 
-  def find(after_index, elements)
+  def find(position, elements)
     current_node = @head
     counter = 0
-      while counter != after_index
+      while counter != position
+        current_node = current_node.next_node
+        counter += 1
+      end
+        string = ""
+        elements.times do
+        string << current_node.value + " "
+        current_node = current_node.next_node
+      end
+      string.strip
   end
 
 end
