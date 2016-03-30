@@ -84,10 +84,13 @@ class Linkedlist
   end
 
   def pop
-    removed_value = ""
-    # now essentially I want to set the node
-    # before the tail, to be the new tail
-    removed_value + tail.value
+    saved = tail.value
+    current = @head
+    until current.next_node.next_node == nil
+      current = current.next_node
+    end
+    current.next_node = nil
+    saved 
   end
 
 end

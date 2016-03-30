@@ -125,7 +125,7 @@ class LinkedlistTest < Minitest::Test
       assert_equal "dah deep plop", list.to_string
 
       assert_equal "plop", list.pop
-      # assert_equal "dah deep", list.to_string
+      assert_equal "dah deep", list.to_string
     end
 
     def test_include_in_my_nodes
