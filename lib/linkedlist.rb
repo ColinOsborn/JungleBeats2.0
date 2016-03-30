@@ -77,7 +77,17 @@ class Linkedlist
 
   def include(beat)
     current_node = @head
-    while 
+    until beat != current_node.value
+      current_node = current_node.next_node
+    end
+      beat
+  end
+
+  def pop
+    removed_value = ""
+    # now essentially I want to set the node
+    # before the tail, to be the new tail
+    removed_value + tail.value
   end
 
 end

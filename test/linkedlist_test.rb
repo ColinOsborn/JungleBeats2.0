@@ -116,15 +116,17 @@ class LinkedlistTest < Minitest::Test
     assert_equal "dee", list.find(2, 1)
     end
 
-    # def test_we_can_pop_off_node
-    #   list = Linkedlist.new("dah")
-    #   assert_equal "dah", list.head.value
-    #
-    #   list.append("plop")
-    #   assert_equal "dah plop", list.to_string
-    #
-    #   assert_equal "plop", list.pop
-    # end
+    def test_we_can_pop_off_node
+      list = Linkedlist.new("dah")
+      assert_equal "dah", list.head.value
+
+      list.append("deep")
+      list.append("plop")
+      assert_equal "dah deep plop", list.to_string
+
+      assert_equal "plop", list.pop
+      # assert_equal "dah deep", list.to_string
+    end
 
     def test_include_in_my_nodes
       list = Linkedlist.new("dop")
