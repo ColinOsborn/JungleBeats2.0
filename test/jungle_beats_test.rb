@@ -46,11 +46,17 @@ class JungleBeatsTest < Minitest::Test
   #   jb.append("ding dah oom oom ding oom oom oom ding dah oom oom ding dah oom oom ding dah oom oom ")
   #   jb.play
   # end
+  # 
+  # def test_we_can_troll_horace
+  #   jb = JungleBeat.new
+  #   jb.append("yo give me a fooooooooooooooooouuuuuuuuurrrrr")
+  #   jb.play
+  # end
 
-  def test_we_can_troll_horace
+  def test_we_can_adjust_the_voice
     jb = JungleBeat.new
-    jb.append("yo give me a fooooooooooooooooouuuuuuuuurrrrr")
+    jb.append("ding dah oom oom ding oom oom oom ding dah oom oom ding dah oom oom ding dah oom oom ")
+    jb.voice("Alice")
     jb.play
   end
-
 end

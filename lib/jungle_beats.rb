@@ -25,4 +25,7 @@ class JungleBeat
     `say -r 500 -v Boing #{beats}`
   end
 
+  def voice(tone)
+    `say -r 500 -v #{tone.capitalize} beats`
+  end
 end
