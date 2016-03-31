@@ -45,7 +45,6 @@ class JungleBeatsTest < Minitest::Test
     jb = JungleBeat.new
     jb.append("ding dah oom oom ding oom oom oom ding dah oom oom ding dah oom oom ding dah oom oom ")
     jb.play
-
   end
 
 end
