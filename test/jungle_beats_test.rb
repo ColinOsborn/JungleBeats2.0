@@ -41,4 +41,11 @@ class JungleBeatsTest < Minitest::Test
     assert_equal 20, jb.list.count
   end
 
+  def test_we_can_play_all_of_these_nodes
+    jb = JungleBeat.new
+    jb.append("ding dah oom oom ding oom oom oom ding dah oom oom ding dah oom oom ding dah oom oom ")
+    jb.play
+
+  end
+
 end
