@@ -51,8 +51,8 @@ class JungleBeatsTest < Minitest::Test
     skip
     jb = JungleBeat.new
     jb.append("yo give me a fooooooooooooooooouuuuuuuuurrrrr Hoooorrrrassse")
-    jb.rate = 100
-    jb.voice = "Alice"
+    jb.rate = 50
+    jb.voice = "Bad News"
     jb.play
   end
 
