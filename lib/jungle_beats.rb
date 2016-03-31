@@ -9,5 +9,13 @@ class JungleBeat
     @list = Linkedlist.new
   end
 
+  def append(beat)
+    single_beats = beat.split
+    single_beats.each do |beat|
+      @list.append(beat)
+    end
+  end
+
+
 
 end
