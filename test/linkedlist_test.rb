@@ -144,6 +144,18 @@ class LinkedlistTest < Minitest::Test
       list.append("plop")
       list.append("suu")
       assert_equal "dop plop suu", list.to_string
-      assert_equal "plop", list.include("plop")
+      assert true, list.include?("plop")
+    end
+
+    def test_returns_false_if_not_there
+      list = Linkedlist.new
+      list.append "dop"
+      assert_equal "dop", list.head.value
+
+      list.append("plop")
+      list.append("suu")
+      list.append("poop")
+      refute_equal false, list.include?("pizza")
+      assert_equal "dop plop suu poop", list.to_string
     end
 end

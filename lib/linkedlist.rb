@@ -21,6 +21,7 @@ class Linkedlist
     else
     new_node = Node.new(value)
     tail.next_node = new_node
+    new_node.value
     end
   end
 
@@ -86,13 +87,16 @@ end
       string.strip
   end
 
-  def include(beat)
+  def include?(beat)
     current_node = @head
-    until beat != current_node.value
+    until current_node == nil
+      return true
+      if current_node.next_node == beat
       current_node = current_node.next_node
     end
-      beat
+    false
   end
+end
 
 
   def pop
