@@ -4,9 +4,12 @@ require "pry"
 
 class JungleBeat
   attr_reader :list
+  attr_accessor :rate, :voice
 
   def initialize
     @list = Linkedlist.new
+    @rate = 500
+    @voice = "Boing"
   end
 
   def append(beat)
@@ -22,10 +25,7 @@ class JungleBeat
 
   def play
     beats = @list.to_string
-    `say -r 500 -v Boing #{beats}`
+    `say -r #{@rate} -v #{@voice} #{beats}`
   end
 
-  def voice(tone)
-    `say -r 500 -v #{tone.capitalize} beats`
-  end
 end

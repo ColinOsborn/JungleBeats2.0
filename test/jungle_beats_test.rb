@@ -41,19 +41,23 @@ class JungleBeatsTest < Minitest::Test
     assert_equal 20, jb.count
   end
 
-  # def test_we_can_play_all_of_these_nodes
-  #   jb = JungleBeat.new
-  #   jb.append("ding dah oom oom ding oom oom oom ding dah oom oom ding dah oom oom ding dah oom oom ")
-  #   jb.play
-  # end
-  # 
-  # def test_we_can_troll_horace
-  #   jb = JungleBeat.new
-  #   jb.append("yo give me a fooooooooooooooooouuuuuuuuurrrrr")
-  #   jb.play
-  # end
+  def test_we_can_play_all_of_these_nodes
+    jb = JungleBeat.new
+    jb.append("ding dah oom oom ding oom oom oom ding dah oom oom ding dah oom oom ding dah oom oom ")
+    jb.play
+  end
+
+  def test_we_can_troll_horace
+    skip
+    jb = JungleBeat.new
+    jb.append("yo give me a fooooooooooooooooouuuuuuuuurrrrr Hoooorrrrassse")
+    jb.rate = 100
+    jb.voice = "Alice"
+    jb.play
+  end
 
   def test_we_can_adjust_the_voice
+    skip
     jb = JungleBeat.new
     jb.append("ding dah oom oom ding oom oom oom ding dah oom oom ding dah oom oom ding dah oom oom ")
     jb.voice("Alice")
