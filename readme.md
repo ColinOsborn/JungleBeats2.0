@@ -9,3 +9,5 @@
 
 
 link to Jungle Beats spec - https://github.com/turingschool/curriculum/blob/master/source/projects/jungle_beat.markdown
+
+* After review, Horace pointed out some areas holes in the program (i.e. testing for if there is no node etc) But overall was satisfactory by Horace, and finally something I'm proud to turn in.  
