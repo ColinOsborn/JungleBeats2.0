@@ -25,25 +25,31 @@ class JungleBeatsTest < Minitest::Test
   def test_we_can_append_multiple_nodes_at_once
     jb = JungleBeat.new
     jb.append("woo hoo shu")
-    assert_equal 3, jb.list.count
+    assert_equal 3, jb.count
   end
 
   def test_we_can_read_head_data_after_appending_many_nodes
     jb = JungleBeat.new
     jb.append("dop plop suu poop")
     assert_equal "dop", jb.list.head.value
-    assert_equal 4, jb.list.count
+    assert_equal 4, jb.count
   end
 
   def test_we_can_keep_track_of_all_these_nodes
     jb = JungleBeat.new
     jb.append("ding dah oom oom ding oom oom oom ding dah oom oom ding dah oom oom ding dah oom oom ")
-    assert_equal 20, jb.list.count
+    assert_equal 20, jb.count
   end
 
-  def test_we_can_play_all_of_these_nodes
+  # def test_we_can_play_all_of_these_nodes
+  #   jb = JungleBeat.new
+  #   jb.append("ding dah oom oom ding oom oom oom ding dah oom oom ding dah oom oom ding dah oom oom ")
+  #   jb.play
+  # end
+
+  def test_we_can_troll_horace
     jb = JungleBeat.new
-    jb.append("ding dah oom oom ding oom oom oom ding dah oom oom ding dah oom oom ding dah oom oom ")
+    jb.append("yo give me a fooooooooooooooooouuuuuuuuurrrrr")
     jb.play
   end
 

@@ -16,9 +16,12 @@ class JungleBeat
     end
   end
 
+  def count
+    @list.count
+  end
+
   def play
     beats = @list.to_string
-    binding.pry
     `say -r 500 -v Boing #{beats}`
   end
 
